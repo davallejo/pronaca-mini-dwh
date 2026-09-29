@@ -63,12 +63,7 @@ El proyecto los integra en un **Data Warehouse** listo para análisis, y separa 
 
 ## 🧩 Arquitectura
 
-```
-📄 productos.csv ─┐
-🧾 clientes.json ─┼─► 🐍 ETL (Pandas) ─► ✅ Calidad DAMA ─► 🗄️ SQLite (esquema estrella) ─┬─► 📊 Tableau Public
-📄 ventas.csv ────┘          │                                                            └─► 📓 Notebook (SciPy / scikit-learn / ⚡ PySpark)
-                             └─► 🚫 ventas_rechazadas.csv (con motivo)
-```
+<img width="1591" height="710" alt="image" src="https://github.com/user-attachments/assets/a53860be-5955-4bea-9956-699bc05b96cf" />
 
 ## 🛠️ Tecnologías
 
@@ -113,17 +108,7 @@ pronaca-mini-dwh/
 
 Modelo **multidimensional (esquema estrella)** con grano de una línea de venta.
 
-```
-            ┌──────────────┐
-            │  dim_fecha   │
-            └──────┬───────┘
-┌──────────────┐   │   ┌──────────────┐
-│ dim_producto ├───┼───┤  dim_cliente │
-└──────────────┘   │   └──────────────┘
-              ┌────┴──────┐
-              │fact_ventas│
-              └───────────┘
-```
+<img width="1550" height="927" alt="image" src="https://github.com/user-attachments/assets/273dd59c-c28a-46e1-989f-d26ffb90c608" />
 
 | Tabla | Tipo | Descripción |
 |---|---|---|
