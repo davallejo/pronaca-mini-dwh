@@ -42,7 +42,7 @@
 
 ## 🎯 Objetivo
 
-Demostrar, en un proyecto pequeño y reproducible, las habilidades clave de un/a **Ingeniero/a de Datos**:
+Demostrar, en un proyecto pequeño y reproducible, las habilidades clave de un **Ingeniero/a de Datos**:
 
 - 🗄️ Administrar repositorios de datos con integridad y seguridad.
 - 📐 Diseñar estructuras de datos optimizadas para análisis (modelo multidimensional).
@@ -84,7 +84,7 @@ El proyecto los integra en un **Data Warehouse** listo para análisis, y separa 
 | 📊 | **Tableau Public** | Dashboard interactivo |
 | 🐙 | **GitHub** | Versionado y portafolio |
 
-> 💸 Todo el stack es **gratuito y sin suscripción**.
+> 💸 Todo el stack es **gratuito y sin suscripción** con fines demostrativos.
 
 ## 📁 Estructura del proyecto
 
@@ -161,7 +161,7 @@ Los registros que no cumplen se envían a `data/processed/ventas_rechazadas.csv`
 
 ### Opción 1: ☁️ En Google Colab (sin instalar nada)
 
-1. Abre el notebook `notebooks/pronaca_dwh.ipynb` en [Google Colab](https://colab.research.google.com).
+1. Abrir el notebook `notebooks/pronaca_dwh.ipynb` en [Google Colab](https://colab.research.google.com).
 2. Ejecuta las celdas en orden con el botón ▶.
 
 ### Opción 2: 💻 En tu computador
@@ -199,7 +199,9 @@ Más consultas en [`sql/02_consultas_analiticas.sql`](sql/02_consultas_analitica
 
 ## 📊 Dashboard
 
-🔗 **[Ver dashboard en Tableau Public](PEGA_AQUI_TU_ENLACE)**
+🔗 **[Ver dashboard en Tableau Public](https://public.tableau.com/views/DashboardEjecutivoPRONACA-Demo/DashboardEjecutivoPRONACA-Demo?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
+
+<img width="1844" height="771" alt="image" src="https://github.com/user-attachments/assets/5c4b8fe6-215d-4ac3-9a4d-1ae2127dc1b0" />
 
 Incluye:
 - 📊 Ventas por categoría
