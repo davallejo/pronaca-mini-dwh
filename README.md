@@ -201,11 +201,132 @@ Más consultas en [`sql/02_consultas_analiticas.sql`](sql/02_consultas_analitica
 
 🔗 **[Ver dashboard en Tableau Public](https://public.tableau.com/views/DashboardEjecutivoPRONACA-Demo/DashboardEjecutivoPRONACA-Demo?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
 
-<img width="1844" height="771" alt="image" src="https://github.com/user-attachments/assets/5c4b8fe6-215d-4ac3-9a4d-1ae2127dc1b0" />
+<img width="1849" height="768" alt="image" src="https://github.com/user-attachments/assets/f5c45368-250a-4ac7-b731-e5036fc816db" />
 
 Incluye:
 - 📊 Ventas por categoría
 - 📈 Tendencia mensual de ventas
+
+## 📊 Análisis de resultados
+
+![Dashboard Ejecutivo](docs/dashboard.png)
+
+> ℹ️ Los datos son **ficticios** y fueron generados por código. Las conclusiones ilustran el tipo de análisis que habilita el modelo dimensional y no representan la operación real de ninguna empresa.
+
+### 🎯 Resumen ejecutivo
+
+Entre **enero y junio de 2025** se registraron **295 ventas válidas** por **$93,500**, con **18,070 unidades** vendidas y un **ticket promedio de $316.95**. Cada venta movió en promedio **61 unidades** a un precio medio de **$5.17 por unidad**. El negocio se apoya en dos líneas (Embutidos y Pollo, **76%** de las ventas), en cinco productos (**62%**) y en dos ciudades (Guayaquil y Cuenca, **53%**). El **segundo trimestre vendió 45% más que el primero**, pero el ritmo se desacelera desde abril.
+
+### 📌 Indicadores clave
+
+| Indicador | Valor |
+|---|---|
+| 💰 Ventas totales | **$93,500** |
+| 📦 Unidades vendidas | **18,070** |
+| 🧾 Nº de ventas | **295** |
+| 🎯 Ticket promedio | **$316.95** |
+
+### 🔎 Hallazgos
+
+#### 📈 Tendencia mensual
+
+| Mes | Ventas |
+|---|---|
+| Enero | $16,110 |
+| Febrero | $10,521 |
+| Marzo | $11,562 |
+| **Abril** | **$21,500** |
+| Mayo | $18,276 |
+| Junio | $15,531 |
+
+- **Abril es el mejor mes**: supera en **38%** al promedio mensual (~$15.6K) y crece **+86%** frente a marzo.
+- **Febrero es el mínimo** y cae **35%** frente a enero.
+- **Por trimestre**: el 1.er trimestre suma $38.2K (41%) y el 2.º suma $55.3K (59%).
+- **Alerta**: desde abril las ventas bajan mes a mes (**-15%** en mayo y **-15%** en junio). Conviene vigilar si se consolida esta tendencia.
+
+#### 🍗 Categorías
+
+| Categoría | Ventas | Participación |
+|---|---|---|
+| Embutidos | $35,930 | 38.4% |
+| Pollo | $35,127 | 37.6% |
+| Cerdo | $22,443 | 24.0% |
+
+- Embutidos y Pollo están **casi empatados** (diferencia de $0.8K).
+- **Cerdo es la línea más eficiente por producto**: con solo 2 productos genera unos **$11.2K por producto**, frente a $9.0K en Embutidos y $8.8K en Pollo (4 productos cada una).
+- **Embutidos lidera por amplitud de portafolio, no por un producto fuerte**: solo uno de sus productos (Jamón cocido) entra al Top 5.
+
+#### 🏆 Productos
+
+| # | Producto | Categoría | Ventas |
+|---|---|---|---|
+| 1 | Jamón cocido | Embutidos | $13,387 |
+| 2 | Costilla de cerdo | Cerdo | $11,435 |
+| 3 | Pechuga de pollo | Pollo | $11,370 |
+| 4 | Chuleta de cerdo | Cerdo | $11,008 |
+| 5 | Nuggets de pollo | Pollo | $10,633 |
+
+- El **Top 5 concentra el 62% de las ventas** con la mitad del catálogo.
+- El Jamón cocido lidera con una ventaja de **$1.9K** sobre el 2.º puesto.
+- Del 2.º al 5.º la diferencia es de solo **$0.8K**: la competencia interna es pareja.
+- El Top 5 está repartido entre las tres categorías (2 de Cerdo, 2 de Pollo y 1 de Embutidos), lo que reduce la dependencia de una sola línea.
+
+#### 🏪 Canales
+
+| Canal | Ventas | Participación |
+|---|---|---|
+| Supermercado | $30,335 | 32.4% |
+| Distribuidor | $23,553 | 25.2% |
+| Tienda de barrio | $20,998 | 22.5% |
+| Restaurante | $18,612 | 19.9% |
+
+El **Supermercado** es el canal principal, pero ningún canal supera un tercio de las ventas: la cartera está **diversificada**. La brecha entre el primero y el último canal es de $11.7K.
+
+#### 📍 Ciudades
+
+| Ciudad | Ventas | Participación |
+|---|---|---|
+| Guayaquil | $26,951 | 28.8% |
+| Cuenca | $22,606 | 24.2% |
+| Quito | $19,221 | 20.6% |
+| Manta | $18,531 | 19.8% |
+| Ambato | $6,190 | 6.6% |
+
+- Guayaquil y Cuenca suman **más de la mitad de las ventas (53%)**.
+- **Ambato queda muy por debajo del resto**: vende solo un tercio de lo que vende Manta, la ciudad que le sigue. Es la principal oportunidad de crecimiento.
+
+### 💡 Recomendaciones (ilustrativas)
+
+1. 🎯 **Proteger el Top 5**: asegurar abastecimiento e inventario de los productos que generan el 62% de las ventas.
+2. 🐖 **Potenciar Cerdo**: es la línea con mayor venta por producto y aporta 2 de los 5 productos líderes; ampliar su portafolio podría elevar su participación.
+3. 🌭 **Impulsar productos de Embutidos distintos al Jamón**: la categoría lidera en total, pero depende de un único producto estrella.
+4. 📍 **Desarrollar Ambato**: reforzar distribución y presencia comercial en la ciudad de menor venta.
+5. 📉 **Investigar la caída posterior a abril**: analizar causas (estacionalidad, promociones, quiebres de stock) antes de que se consolide la tendencia.
+6. 🏪 **Mantener el equilibrio de canales**: apoyar al Supermercado sin descuidar Distribuidores y Tiendas de barrio.
+
+### 🖱️ Cómo explorar el dashboard
+
+El tablero incluye filtros por **Ciudad, Canal y Categoría**, y cada gráfico puede usarse como filtro con un clic. Esto permite responder preguntas como "¿cómo se comporta el Pollo en Quito?" o "¿qué productos venden los Distribuidores?".
+
+### ✅ Calidad de los datos (DAMA)
+
+Antes de llegar al dashboard, el ETL validó los datos con reglas de calidad:
+
+| Control | Resultado |
+|---|---|
+| Ventas recibidas | 302 (2 duplicados exactos eliminados) |
+| Ventas rechazadas | **5** (1.7%): cantidad no positiva (2), cliente nulo, producto inexistente y cliente inexistente |
+| Ventas válidas cargadas | **295 (98.3%)** |
+| Ciudades normalizadas | 3 variantes duplicadas por formato (espacios y mayúsculas) unificadas |
+
+Los registros rechazados se conservan en `ventas_rechazadas.csv` con su motivo, lo que permite **auditar y trazar** cada decisión de limpieza.
+
+### 🧠 Qué demuestra este análisis
+
+- 🔗 **Integración**: 3 fuentes con formatos distintos convertidas en un único modelo consistente.
+- 📐 **Modelado**: esquema estrella que permite analizar el mismo hecho por producto, cliente y tiempo.
+- ✅ **Calidad**: cifras confiables gracias a reglas DAMA y registros rechazados auditables.
+- 📊 **Comunicación**: indicadores y hallazgos orientados a la toma de decisiones.
 
 ## 🗺️ Competencias demostradas
 
